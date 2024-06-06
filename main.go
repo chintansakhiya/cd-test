@@ -97,6 +97,17 @@ func api() cobra.Command {
 
 			})
 
+			fiberapp.Get("/api", func(c *fiber.Ctx) error {
+				return c.JSON(fiber.Map{"message": "Hello, World 👋!",})
+			
+			})
+
+			fiberapp.Get("/health", func(c *fiber.Ctx) error {
+				return c.SendString("ok")
+			})
+
+
+
 			return fiberapp.Listen(":3333")
 		},
 	}
