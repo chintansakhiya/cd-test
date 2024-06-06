@@ -1,0 +1,29 @@
+[
+  {
+    "name": "test-app",
+    "info": {
+      "first_deployed": "2024-06-06T05:25:52.761947+00:00",
+      "last_deployed": "2024-06-06T12:40:38.350995+00:00",
+      "deleted": "",
+      "description": "Upgrade complete",
+      "status": "deployed",
+      "notes": null
+    },
+    "chart": {
+      "metadata": {
+        "name": "polymorphic-app",
+        "version": "1.2.8",
+        "description": "A Helm chart for deploying any custom applications, specifically polymorphic applications.",
+        "apiVersion": "v2",
+        "appVersion": "1.0.0"
+      }
+    },
+    "version": 6,
+    "namespace": "test-app",
+    "deleted": false,
+    "account_id": "b4e31c10-c6c6-479a-9c5f-d512ec48564d",
+    "cluster_id": "robusta-1",
+    "service_key": "test-app/HelmRelease/test-app",
+    "updated_at": "now()"
+  }
+]

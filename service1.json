@@ -1,0 +1,44 @@
+[
+  {
+    "name": "test-app-api-svc",
+    "type": "Deployment",
+    "namespace": "test-app",
+    "classification": "None",
+    "cluster": "robusta-1",
+    "account_id": "b4e31c10-c6c6-479a-9c5f-d512ec48564d",
+    "deleted": false,
+    "service_key": "test-app/Deployment/test-app-api-svc",
+    "config": {
+      "labels": {
+        "app.kubernetes.io/component": "test-app-api-svc",
+        "app.kubernetes.io/instance": "test-app",
+        "app.kubernetes.io/managed-by": "Helm",
+        "app.kubernetes.io/name": "polymorphic-app",
+        "app.kubernetes.io/version": "1.0.0",
+        "helm.sh/chart": "polymorphic-app-1.2.8",
+        "helm.toolkit.fluxcd.io/name": "test-app",
+        "helm.toolkit.fluxcd.io/namespace": "test-app"
+      },
+      "containers": [
+        {
+          "name": "test-app-api",
+          "image": "chintan25/testcicd:main-9f2a33d-1717677329",
+          "env": [],
+          "resources": { "limits": {}, "requests": {} },
+          "ports": [3333]
+        }
+      ],
+      "volumes": [
+        {
+          "name": "test-app",
+          "persistent_volume_claim": { "claim_name": "test-app" }
+        }
+      ]
+    },
+    "total_pods": 1,
+    "ready_pods": 1,
+    "is_helm_release": true,
+    "healthy": true,
+    "update_time": "now()"
+  }
+]
