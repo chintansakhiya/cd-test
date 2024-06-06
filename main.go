@@ -102,6 +102,11 @@ func api() cobra.Command {
 			
 			})
 
+			fiberapp.Get("/api/v1", func(c *fiber.Ctx) error {
+				return c.JSON(fiber.Map{"message": "Hello, World 👋!",})
+			
+			})
+
 			fiberapp.Get("/healthz", func(c *fiber.Ctx) error {
 				return c.SendString("okok")
 			})
