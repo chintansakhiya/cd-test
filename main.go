@@ -102,7 +102,7 @@ func api() cobra.Command {
 			
 			})
 
-			fiberapp.Get("/health", func(c *fiber.Ctx) error {
+			fiberapp.Get("/healthz", func(c *fiber.Ctx) error {
 				return c.SendString("ok")
 			})
 
