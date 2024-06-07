@@ -93,7 +93,9 @@ func api() cobra.Command {
 			fiberapp := fiber.New()
 			fiberapp.Get("/", func(c *fiber.Ctx) error {
 				 
-				return c.SendString("Hello, World 👋!")
+				// return c.SendString("Hello, World 👋!")
+				time.Sleep(3 * time.Second)
+				log.Fatal("this is a custom error")
 				return fmt.Errorf("this is a custom error")
 
 			})
