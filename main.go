@@ -48,7 +48,7 @@ type Attachment struct {
 
 func main() {
 	// time.Sleep(5 * time.Second)
-	log.Fatal("this is a custom error")
+	// log.Fatal("this is a custom error")
 	sendMessage := sendMessage()
 	apiCmd := api()
 	cronJob := GetCronJobDetails()
@@ -95,9 +95,9 @@ func api() cobra.Command {
 			fiberapp := fiber.New()
 			fiberapp.Get("/", func(c *fiber.Ctx) error {
 
-				// return c.SendString("Hello, World 👋!")
-				time.Sleep(3 * time.Second)
-				log.Fatal("this is a custom error")
+				return c.SendString("Hello, World 👋!")
+				// time.Sleep(3 * time.Second)
+				// log.Fatal("this is a custom error")
 				return fmt.Errorf("this is a custom error")
 
 			})
