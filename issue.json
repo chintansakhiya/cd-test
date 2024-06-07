@@ -1,0 +1,32 @@
+{
+  "id": "a60d4360-2d0d-4f77-bafb-0dac8e018eb0",
+  "title": "Crashing pod test-app-api-svc-948df5547-nr6lk in namespace test-app",
+  "description": null,
+  "source": "kubernetes_api_server",
+  "aggregation_key": "CrashLoopBackoff",
+  "failure": true,
+  "finding_type": "issue",
+  "category": null,
+  "priority": "HIGH",
+  "subject_type": "pod",
+  "subject_name": "test-app-api-svc-948df5547-nr6lk",
+  "subject_namespace": "test-app",
+  "subject_node": "alexandria.pride.improwised.dev",
+  "labels": {
+    "app.kubernetes.io/component": "test-app-api-svc",
+    "app.kubernetes.io/instance": "test-app",
+    "app.kubernetes.io/managed-by": "Helm",
+    "app.kubernetes.io/name": "polymorphic-app",
+    "app.kubernetes.io/version": "1.0.0",
+    "helm.sh/chart": "polymorphic-app-1.2.8",
+    "pod-template-hash": "948df5547"
+  },
+  "annotations": {},
+  "service_key": "test-app/Deployment/test-app-api-svc",
+  "cluster": "robusta-1",
+  "account_id": "b4e31c10-c6c6-479a-9c5f-d512ec48564d",
+  "video_links": [],
+  "starts_at": "2024-06-07T05:34:17.115544",
+  "updated_at": "2024-06-07T05:34:17.130358",
+  "fingerprint": "5cc704b8830b542a0385191a5561740bc1da876e8550566b9078a7549c14b9f6"
+}

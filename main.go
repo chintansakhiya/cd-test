@@ -47,7 +47,7 @@ type Attachment struct {
 }
 
 func main() {
-	time.Sleep(5 * time.Second)
+	// time.Sleep(5 * time.Second)
 	log.Fatal("this is a custom error")
 	sendMessage := sendMessage()
 	apiCmd := api()
@@ -94,7 +94,7 @@ func api() cobra.Command {
 		RunE: func(cmd *cobra.Command, args []string) error {
 			fiberapp := fiber.New()
 			fiberapp.Get("/", func(c *fiber.Ctx) error {
-				 
+
 				// return c.SendString("Hello, World 👋!")
 				time.Sleep(3 * time.Second)
 				log.Fatal("this is a custom error")
@@ -103,31 +103,28 @@ func api() cobra.Command {
 			})
 
 			fiberapp.Get("/api", func(c *fiber.Ctx) error {
-				return c.JSON(fiber.Map{"message": "Hello, World 👋!",})
-			
+				return c.JSON(fiber.Map{"message": "Hello, World 👋!"})
+
 			})
 
 			fiberapp.Get("/api/v1", func(c *fiber.Ctx) error {
-				return c.JSON(fiber.Map{"message": "Hello, World 👋!",})
-			
+				return c.JSON(fiber.Map{"message": "Hello, World 👋!"})
+
 			})
 
 			fiberapp.Get("/api/v3", func(c *fiber.Ctx) error {
-				return c.JSON(fiber.Map{"message": "Hello, World 👋!",})
-			
+				return c.JSON(fiber.Map{"message": "Hello, World 👋!"})
+
 			})
 
-
 			fiberapp.Get("/api/v2", func(c *fiber.Ctx) error {
-				return c.JSON(fiber.Map{"message": "Hello, World 👋!",})
-			
+				return c.JSON(fiber.Map{"message": "Hello, World 👋!"})
+
 			})
 
 			fiberapp.Get("/healthz", func(c *fiber.Ctx) error {
 				return c.SendString("okok")
 			})
-
-
 
 			return fiberapp.Listen(":3333")
 		},
