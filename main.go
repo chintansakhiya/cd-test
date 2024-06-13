@@ -94,7 +94,7 @@ func api() cobra.Command {
 		RunE: func(cmd *cobra.Command, args []string) error {
 			fiberapp := fiber.New()
 			fiberapp.Get("/", func(c *fiber.Ctx) error {
-				// return fmt.Errorf("this is a custom error")
+				return fmt.Errorf("this is a custom error")
 				return c.SendString("Hello, World 👋!")
 
 			})
