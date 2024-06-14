@@ -1,92 +1,68 @@
 {
-    "involvedObject": {
-      "apiVersion": "source.toolkit.fluxcd.io/v1",
-      "kind": "GitRepository",
-      "name": "flux-system",
-      "namespace": "flux-system",
-      "resourceVersion": "275837",
-      "uid": "5142bbac-ae19-4274-aaeb-b9bc43d37cb2"
-    },
-    "message": "stored artifact for commit 'Update from image update automation'",
-    "metadata": {
-      "revision": "main@sha1:baf7426b0cc7c2cd1f438e24de482063b9fc6adb",
-      "summary": "this is a webhook alert"
-    },
-    "reason": "NewArtifact",
-    "reportingController": "source-controller",
-    "reportingInstance": "source-controller-86b8b57796-n7x8r",
-    "severity": "info",
-    "timestamp": "2024-06-06T12:40:37Z"
-  }
-  ----------------------------------
-  
-  POST / /
-  {
-    "involvedObject": {
-      "apiVersion": "kustomize.toolkit.fluxcd.io/v1",
-      "kind": "Kustomization",
-      "name": "flux-system",
-      "namespace": "flux-system",
-      "resourceVersion": "275846",
-      "uid": "a530243e-195e-4518-b3ca-5e46d15165ec"
-    },
-    "message": "HelmRelease/test-app/test-app configured",
-    "metadata": {
-      "revision": "main@sha1:baf7426b0cc7c2cd1f438e24de482063b9fc6adb",
-      "summary": "this is a webhook alert"
-    },
-    "reason": "Progressing",
-    "reportingController": "kustomize-controller",
-    "reportingInstance": "kustomize-controller-5f58d55f76-z45x2",
-    "severity": "info",
-    "timestamp": "2024-06-06T12:40:38Z"
-  }
-  ----------------------------------
-  
-  POST / /
-  {
-    "involvedObject": {
-      "apiVersion": "kustomize.toolkit.fluxcd.io/v1",
-      "kind": "Kustomization",
-      "name": "flux-system",
-      "namespace": "flux-system",
-      "resourceVersion": "275846",
-      "uid": "a530243e-195e-4518-b3ca-5e46d15165ec"
-    },
-    "message": "Reconciliation finished in 591.467967ms, next run in 10m0s",
-    "metadata": {
-      "commit_status": "update",
-      "revision": "main@sha1:baf7426b0cc7c2cd1f438e24de482063b9fc6adb",
-      "summary": "this is a webhook alert"
-    },
-    "reason": "ReconciliationSucceeded",
-    "reportingController": "kustomize-controller",
-    "reportingInstance": "kustomize-controller-5f58d55f76-z45x2",
-    "severity": "info",
-    "timestamp": "2024-06-06T12:40:38Z"
-  }
-  ----------------------------------
-  
-  POST / /
-  {
-    "involvedObject": {
-      "apiVersion": "kustomize.toolkit.fluxcd.io/v1",
-      "kind": "Kustomization",
-      "name": "flux-system",
-      "namespace": "flux-system",
-      "resourceVersion": "276931",
-      "uid": "a530243e-195e-4518-b3ca-5e46d15165ec"
-    },
-    "message": "Reconciliation finished in 555.601183ms, next run in 10m0s",
-    "metadata": {
-      "commit_status": "update",
-      "revision": "main@sha1:baf7426b0cc7c2cd1f438e24de482063b9fc6adb",
-      "summary": "this is a webhook alert"
-    },
-    "reason": "ReconciliationSucceeded",
-    "reportingController": "kustomize-controller",
-    "reportingInstance": "kustomize-controller-5f58d55f76-z45x2",
-    "severity": "info",
-    "timestamp": "2024-06-06T12:40:45Z"
-  }
-  
+  "involvedObject": {
+    "apiVersion": "image.toolkit.fluxcd.io/v1beta2",
+    "kind": "ImagePolicy",
+    "name": "test-app-api",
+    "namespace": "test-app",
+    "resourceVersion": "562679",
+    "uid": "d124ce64-234d-4ab5-842a-645b6fd8a377"
+  },
+  "message": "Latest image tag for 'chintan25/testcicd' updated from main-1412627-1718342457 to main-0936eee-1718343121",
+  "metadata": {
+    "summary": " Cluster Status"
+  },
+  "reason": "Succeeded",
+  "reportingController": "image-reflector-controller",
+  "reportingInstance": "image-reflector-controller-677984f64d-hkdlt",
+  "severity": "info",
+  "timestamp": "2024-06-14T05:36:14Z"
+}
+----------------------------------
+
+POST / /
+{
+  "involvedObject": {
+    "apiVersion": "image.toolkit.fluxcd.io/v1beta1",
+    "kind": "ImageUpdateAutomation",
+    "name": "test-app",
+    "namespace": "test-app",
+    "resourceVersion": "563809",
+    "uid": "822ade18-4307-4e78-94c9-636655c5c079"
+  },
+  "message": "committed and pushed commit '239e7443c381cd01ae6fc318a984d1b3a558a974' to branch 'main'\nImage update from automation\nAutomation name: test-app/test-app\nFiles:\n- test-app-helmrelease.yaml\nObjects:\n- HelmRelease test-app\nImages:\n- chintan25/testcicd:main-0936eee-1718343121\n",
+  "metadata": {
+    "summary": " Patching New Image"
+  },
+  "reason": "info",
+  "reportingController": "image-automation-controller",
+  "reportingInstance": "image-automation-controller-654dc4897-bgf5p",
+  "severity": "info",
+  "timestamp": "2024-06-14T05:36:19Z"
+}
+----------------------------------
+
+
+
+
+
+POST / /
+{
+  "involvedObject": {
+    "apiVersion": "source.toolkit.fluxcd.io/v1",
+    "kind": "GitRepository",
+    "name": "flux-system",
+    "namespace": "flux-system",
+    "resourceVersion": "563281",
+    "uid": "9506d028-298b-4e77-9f42-30365a175f18"
+  },
+  "message": "stored artifact for commit 'Image update from automation'",
+  "metadata": {
+    "revision": "main@sha1:239e7443c381cd01ae6fc318a984d1b3a558a974",
+    "summary": " Git commit found"
+  },
+  "reason": "NewArtifact",
+  "reportingController": "source-controller",
+  "reportingInstance": "source-controller-7657cffdb-9nd5j",
+  "severity": "info",
+  "timestamp": "2024-06-14T05:37:16Z"
+}

@@ -57,8 +57,6 @@ require (
 )
 
 require (
-	github.com/doug-martin/goqu v5.0.0+incompatible
-	github.com/doug-martin/goqu/v9 v9.19.0
 	github.com/gofiber/fiber/v2 v2.52.4
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
