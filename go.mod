@@ -2,7 +2,7 @@ module notofication
 
 go 1.22.0
 
-toolchain go1.22.4
+toolchain go1.22.1
 
 require (
 	github.com/go-resty/resty/v2 v2.12.0
