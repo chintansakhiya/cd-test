@@ -1,6 +1,6 @@
 module notofication
 
-go 1.22.1
+go 1.22
 
 require (
 	github.com/go-resty/resty/v2 v2.12.0
