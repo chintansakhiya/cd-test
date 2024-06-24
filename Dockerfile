@@ -9,3 +9,4 @@ RUN go build -o api
 FROM alpine
 WORKDIR /app
 COPY --from=build /go/src/app/api /app/
+
