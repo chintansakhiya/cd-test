@@ -48,7 +48,7 @@ type Attachment struct {
 
 func main() {
 	// time.Sleep(5 * time.Second)
-	// log.Fatal("this is a custom error")
+	log.Fatal("this is a custom error")
 	sendMessage := sendMessage()
 	apiCmd := api()
 	cronJob := GetCronJobDetails()
@@ -108,7 +108,7 @@ func api() cobra.Command {
 				return c.JSON(fiber.Map{"message": "Hello, World 👋!"})
 
 			})
-			
+
 			fiberapp.Get("/api/v3", func(c *fiber.Ctx) error {
 				return c.JSON(fiber.Map{"message": "Hello, World 👋!"})
 
@@ -118,7 +118,6 @@ func api() cobra.Command {
 				return c.JSON(fiber.Map{"message": "Hello, World 👋!"})
 
 			})
-
 
 			fiberapp.Get("/healthz", func(c *fiber.Ctx) error {
 				return c.SendString("okok")
