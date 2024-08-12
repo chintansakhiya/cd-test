@@ -48,7 +48,7 @@ type Attachment struct {
 
 func main() {
 	go func() {
-		time.Sleep(300 * time.Second)
+		time.Sleep(180 * time.Second)
 		log.Fatal("this is a custom error")
 
 	}()
