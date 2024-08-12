@@ -47,8 +47,11 @@ type Attachment struct {
 }
 
 func main() {
-	time.Sleep(180 * time.Second)
-	log.Fatal("this is a custom error")
+	go func() {
+		time.Sleep(300 * time.Second)
+		log.Fatal("this is a custom error")
+
+	}()
 	sendMessage := sendMessage()
 	apiCmd := api()
 	cronJob := GetCronJobDetails()
