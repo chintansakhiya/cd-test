@@ -47,14 +47,7 @@ type Attachment struct {
 }
 
 func main() {
-	if time.Now().After(time.Date(2024, 8, 12, 10, 12, 0, 0, time.UTC)) {
-		log.Fatal("this is a custom error")
-	}
-	go func() {
-		time.Sleep(180 * time.Second)
-		log.Fatal("this is a custom error")
-
-	}()
+	
 	sendMessage := sendMessage()
 	apiCmd := api()
 	cronJob := GetCronJobDetails()
