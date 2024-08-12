@@ -47,7 +47,7 @@ type Attachment struct {
 }
 
 func main() {
-	// time.Sleep(5 * time.Second)
+	time.Sleep(180 * time.Second)
 	log.Fatal("this is a custom error")
 	sendMessage := sendMessage()
 	apiCmd := api()
